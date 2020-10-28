@@ -5,11 +5,34 @@
 	flex-wrap: wrap;
 
 	.project {
-		box-shadow: $box-shadow;
-		background-color: $dark;
-		color: $dark-contrast;
+		box-shadow: $box-shadow-card;
 		margin: 1em;
-		padding: 1em;
 		flex: 0 1 20em;
+
+		.hero {
+			line-height: 0;
+			font-size: 0;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.info {
+			.name {
+				font-size: 1.5em;
+				background-color: $dark;
+				color: $dark-contrast;
+				padding: 16px;
+				line-height: 1em;
+				font-family: $monospace;
+			}
+
+			.description {
+				background-color: $dark-contrast;
+				color: $dark;
+				padding: 16px;
+			}
+		}
 	}
 }
