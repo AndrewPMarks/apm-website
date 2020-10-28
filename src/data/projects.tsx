@@ -1,26 +1,15 @@
-export const projects = [
+export type ProjectType = {
+	name: string;
+	link: string;
+	description: string;
+	image?: string;
+};
+
+export const projects: ProjectType[] = [
 	{
-		name: 'Project 1',
-		link: '/projects',
-	},
-	{
-		name: 'Project 2',
-		link: '/projects',
-	},
-	{
-		name: 'Project 3',
-		link: '/projects',
-	},
-	{
-		name: 'Project 4',
-		link: '/projects',
-	},
-	{
-		name: 'Project 5',
-		link: '/projects',
-	},
-	{
-		name: 'Project 6',
-		link: '/projects',
+		name: 'AndrewMarks.io',
+		link: '/',
+		description:
+			'Lorem ipsum dolor sit amet, duis excepteur enim irure nisi nostrud velit occaecat tempor duis culpa exercitation sint elit minim consectetur culpa officia et pariatur',
 	},
 ];
