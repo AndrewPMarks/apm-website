@@ -5,6 +5,7 @@ nav {
 	display: flex;
 	font-family: $monospace;
 	justify-content: space-between;
+	box-shadow: $box-shadow;
 
 	header {
 		font-size: 2em;
