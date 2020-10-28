@@ -21,7 +21,7 @@ nav {
 		font-size: 1.3em;
 		padding: 0 0.4em;
 
-		.link {
+		& > a {
 			color: inherit;
 			text-decoration: none;
 			height: 100%;
@@ -29,10 +29,31 @@ nav {
 			justify-content: center;
 			align-items: center;
 			padding: 0 0.4em;
+			&:before {
+				content: '/';
+				color: $dark-contrast;
+				transition: color 0.1s ease-out;
+			}
 
 			div {
+				position: relative;
 				&:before {
 					content: '/';
+					padding-right: 0.2em;
+					opacity: 0;
+					transition: opacity 0.1s ease-out;
+				}
+			}
+
+			&.active {
+				&:before {
+					color: $highlight;
+				}
+				div {
+					&:before {
+						opacity: 1;
+						color: $highlight;
+					}
 				}
 			}
 		}
