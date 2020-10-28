@@ -1,5 +1,6 @@
 {
   "name": "apm-website",
+  "homepage": "https://andrewmarks.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
