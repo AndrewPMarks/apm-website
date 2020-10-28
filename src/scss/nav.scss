@@ -10,9 +10,20 @@ nav {
 	header {
 		font-size: 2em;
 
+		.highlight {
+			color: $dark-contrast;
+			transition: color 0.2s ease-in-out;
+		}
+
 		a {
 			padding: 0.5em;
 			display: block;
+		}
+
+		.active {
+			span {
+				color: $highlight;
+			}
 		}
 	}
 
@@ -28,12 +39,12 @@ nav {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			padding: 0 0.4em;
+			padding: 0 0.3em;
 			&:before {
 				content: '/';
 				color: $highlight;
 				opacity: 0;
-				transition: opacity 0.1s ease-out;
+				transition: opacity 0.2s ease-in-out;
 			}
 
 			div {
@@ -42,7 +53,7 @@ nav {
 					content: '/';
 					padding-right: 0.2em;
 					color: $dark-contrast;
-					transition: color 0.1s ease-out;
+					transition: color 0.2s ease-in-out;
 				}
 			}
 
@@ -76,7 +87,7 @@ nav {
 			justify-content: center;
 
 			.link {
-				padding: 0.4em 0.4em 1em 0.4em;
+				padding: 0.4em 0.3em 1em 0.3em;
 			}
 		}
 	}

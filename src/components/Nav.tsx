@@ -1,13 +1,18 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Nav = () => {
 	return (
 		<nav>
 			<header>
-				<Link to='/' className='no-style'>
-					AndrewMarks.io
-				</Link>
+				<NavLink
+					to='/'
+					className='no-style'
+					activeClassName='active'
+					exact
+				>
+					AndrewMarks<span className='highlight'>.io</span>
+				</NavLink>
 			</header>
 			<div className='links'>
 				<NavLink

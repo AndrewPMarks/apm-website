@@ -4,26 +4,45 @@ import { Nav } from './components/Nav';
 import { PageIndex } from './pages/PageIndex';
 import { PageContact } from './pages/PageContact';
 import { PageProjects } from './pages/PageProjects';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Switch, Route, withRouter } from 'react-router-dom';
 
-export const PageRouter = () => {
+export const PageRouter = withRouter(({ location }) => {
 	return (
-		<Router>
-			<div className="wrapper">
+		<div className='wrapper'>
+			<div className='flex-container'>
 				<Nav />
-				<div className="container">
-					<Switch>
-						<Route path="/" exact component={PageIndex} />
-						<Route
-							path="/projects"
-							exact
-							component={PageProjects}
-						/>
-						<Route path="/contact" exact component={PageContact} />
-					</Switch>
+				<div className='container'>
+					<TransitionGroup className='transition-group'>
+						<CSSTransition
+							key={location.key}
+							timeout={{ enter: 100, exit: 100 }}
+							classNames={'fade'}
+						>
+							<section className='route-section'>
+								<Switch location={location}>
+									<Route
+										path='/'
+										exact
+										component={PageIndex}
+									/>
+									<Route
+										path='/projects'
+										exact
+										component={PageProjects}
+									/>
+									<Route
+										path='/contact'
+										exact
+										component={PageContact}
+									/>
+								</Switch>
+							</section>
+						</CSSTransition>
+					</TransitionGroup>
 				</div>
 			</div>
 			<Footer />
-		</Router>
+		</div>
 	);
-};
+});
