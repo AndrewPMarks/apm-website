@@ -12,8 +12,10 @@ type ProjectProps = {
 export const Project = (props: ProjectProps) => {
 	let { name, link } = props.project;
 	return (
-		<article>
-			<Link to={link}>{name}</Link>
+		<article className="project">
+			<Link to={link} className="no-style link">
+				{name}
+			</Link>
 		</article>
 	);
 };

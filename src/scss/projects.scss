@@ -1,0 +1,15 @@
+.projects {
+	display: flex;
+	margin: 0 1em;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	.project {
+		box-shadow: $box-shadow;
+		background-color: $dark;
+		color: $dark-contrast;
+		margin: 1em;
+		padding: 1em;
+		min-width: 200px;
+	}
+}
