@@ -31,8 +31,9 @@ nav {
 			padding: 0 0.4em;
 			&:before {
 				content: '/';
-				color: $dark-contrast;
-				transition: color 0.1s ease-out;
+				color: $highlight;
+				opacity: 0;
+				transition: opacity 0.1s ease-out;
 			}
 
 			div {
@@ -40,18 +41,17 @@ nav {
 				&:before {
 					content: '/';
 					padding-right: 0.2em;
-					opacity: 0;
-					transition: opacity 0.1s ease-out;
+					color: $dark-contrast;
+					transition: color 0.1s ease-out;
 				}
 			}
 
 			&.active {
 				&:before {
-					color: $highlight;
+					opacity: 1;
 				}
 				div {
 					&:before {
-						opacity: 1;
 						color: $highlight;
 					}
 				}
