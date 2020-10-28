@@ -9,6 +9,10 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import { NotFound } from './components/NotFound';
 
 export const PageRouter = withRouter(({ location }) => {
+	if (process.env.NODE_ENV === 'development') {
+		document.title = 'AndrewMarks.io - dev';
+	}
+
 	return (
 		<div className='wrapper'>
 			<div className='flex-container'>

@@ -11,7 +11,8 @@ export const Nav = () => {
 					activeClassName='active'
 					exact
 				>
-					<span className='highlight'>AndrewMarks</span>.io
+					<span className='highlight'>AndrewMarks</span>
+					<span className='hover-highlight'>.io</span>
 				</NavLink>
 			</header>
 			<div className='links'>

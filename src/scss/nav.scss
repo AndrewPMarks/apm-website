@@ -15,14 +15,29 @@ nav {
 			transition: color 0.2s ease-in-out;
 		}
 
+		.hover-highlight {
+			color: $dark-contrast;
+			transition: color 0.2s ease-in-out;
+		}
+
 		a {
 			padding: 0.5em;
 			display: block;
 		}
 
-		.active {
-			span {
+		&:hover {
+			.hover-highlight {
 				color: $highlight;
+			}
+		}
+
+		.active {
+			.highlight {
+				color: $highlight;
+			}
+
+			.hover-highlight {
+				color: $dark-contrast;
 			}
 		}
 	}
