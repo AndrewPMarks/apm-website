@@ -67,6 +67,14 @@ nav {
 					}
 				}
 			}
+
+			&:hover {
+				div {
+					&:before {
+						color: $highlight;
+					}
+				}
+			}
 		}
 	}
 }
