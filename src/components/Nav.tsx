@@ -11,7 +11,7 @@ export const Nav = () => {
 					activeClassName='active'
 					exact
 				>
-					AndrewMarks<span className='highlight'>.io</span>
+					<span className='highlight'>AndrewMarks</span>.io
 				</NavLink>
 			</header>
 			<div className='links'>
