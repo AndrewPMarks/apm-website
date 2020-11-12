@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const PageContact = () => {
-	return <div>Contact page</div>;
+	return <div className='center-text'>In development</div>;
 };

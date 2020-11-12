@@ -22,7 +22,7 @@ export const Nav = () => {
 					className='link'
 					exact
 				>
-					<div>projects</div>
+					projects
 				</NavLink>
 				<NavLink
 					to='/contact'
@@ -30,7 +30,7 @@ export const Nav = () => {
 					className='link'
 					exact
 				>
-					<div>contact</div>
+					contact
 				</NavLink>
 			</div>
 		</nav>

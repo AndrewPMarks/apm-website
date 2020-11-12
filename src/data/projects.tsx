@@ -5,7 +5,9 @@ export type ProjectType = {
 	image?: string;
 };
 
-export const projects: ProjectType[] = [
+export const projects: ProjectType[] = [];
+
+export const projectsDev: ProjectType[] = [
 	{
 		name: 'AndrewMarks.io',
 		link: '/',

@@ -12,12 +12,12 @@ nav {
 
 		.highlight {
 			color: $dark-contrast;
-			transition: color 0.2s ease-in-out;
+			transition: color 0.1s ease-in-out;
 		}
 
 		.hover-highlight {
 			color: $dark-contrast;
-			transition: color 0.2s ease-in-out;
+			transition: color 0.1s ease-in-out;
 		}
 
 		a {
@@ -55,40 +55,39 @@ nav {
 			justify-content: center;
 			align-items: center;
 			padding: 0 0.3em;
+			margin-left: 24px;
+			position: relative;
+			box-sizing: border-box;
+
 			&:before {
+				content: '/';
+				color: $dark-contrast;
+				position: absolute;
+				right: 100%;
+				margin-right: 8px;
+				transition: all 0.1s ease-in-out;
+			}
+			&:after {
 				content: '/';
 				color: $highlight;
 				opacity: 0;
-				transition: opacity 0.2s ease-in-out;
-			}
-
-			div {
-				position: relative;
-				&:before {
-					content: '/';
-					padding-right: 0.2em;
-					color: $dark-contrast;
-					transition: color 0.2s ease-in-out;
-				}
+				position: absolute;
+				right: 100%;
+				margin-right: 8px;
+				transition: all 0.1s ease-in-out;
 			}
 
 			&.active {
 				&:before {
-					opacity: 1;
+					color: $highlight;
 				}
-				div {
-					&:before {
-						color: $highlight;
-					}
+				&:after {
+					margin-right: 0;
+					opacity: 1;
 				}
 			}
 
 			&:hover {
-				div {
-					&:before {
-						color: $highlight;
-					}
-				}
 			}
 		}
 	}
