@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import type { ProjectType } from '../data/projects';
 
 type ProjectProps = {
@@ -10,7 +9,7 @@ type ProjectProps = {
 export const Project = (props: ProjectProps) => {
 	let { name, link, description, image } = props.project;
 	return (
-		<Link to={link} className='no-style link project'>
+		<a href={link} className='no-style link project'>
 			{image && (
 				<aside className='hero'>
 					<img src={image} alt='' />
@@ -18,8 +17,11 @@ export const Project = (props: ProjectProps) => {
 			)}
 			<article className='info'>
 				<div className='name'>{name}</div>
-				<div className='description'>{description}</div>
+				<div
+					className='description'
+					dangerouslySetInnerHTML={{ __html: description }}
+				></div>
 			</article>
-		</Link>
+		</a>
 	);
 };

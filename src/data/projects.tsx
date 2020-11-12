@@ -8,16 +8,8 @@ export type ProjectType = {
 export const projects: ProjectType[] = [
 	{
 		name: 'AndrewMarks.io',
-		link: '/',
-		image: '/images/placeholder.png',
-		description:
-			'Lorem ipsum dolor sit amet, duis excepteur enim irure nisi nostrud velit occaecat tempor duis culpa exercitation sint elit minim consectetur culpa officia et pariatur',
-	},
-	{
-		name: 'AndrewMarks.io',
-		link: '/',
+		link: 'https://andrewmarks.io/',
 		image: '/images/projects/andrewmarks.io.png',
-		description:
-			'Lorem ipsum dolor sit amet, duis excepteur enim irure nisi nostrud velit occaecat tempor duis culpa exercitation sint elit minim consectetur culpa officia et pariatur',
+		description: `This is my personal website that you are currently on. It is a single page application build using <a href="https://reactjs.org/">React</a> and <a href="https://www.typescriptlang.org/">Typescript</a>. View this project on <a href="https://github.com/AndrewPMarks/apm-website">GitHub</a>`,
 	},
 ];
